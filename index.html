@@ -225,6 +225,197 @@
     </div>
 
 </body>
+</html>            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+            position: relative;
+        }
+
+        /* Glass Card */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Gold top border */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold-gradient);
+        }
+
+        /* Flash Sale Badge */
+        .flash-badge {
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--gold);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .extension { color: var(--gold); -webkit-text-fill-color: var(--gold); }
+
+        .pitch {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Price Box */
+        .offer-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .offer-label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+            text-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+        }
+
+        .currency { font-size: 1.5rem; vertical-align: super; opacity: 0.7; }
+
+        .condition {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        
+        .paypal-icon { color: #3b82f6; font-weight: bold; }
+
+        /* CTA Button */
+        .buy-btn {
+            display: block;
+            width: 100%;
+            background: var(--gold-gradient);
+            color: #0f172a;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.4);
+        }
+
+        .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 35px -5px rgba(217, 119, 6, 0.5);
+        }
+
+        .sub-text {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.2);
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Mobile */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            .price { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            
+            <div class="flash-badge">⚡ Instant Transfer Available</div>
+
+            <h1>AnalyFlow<span class="extension">.com</span></h1>
+
+            <p class="pitch">
+                Premium, brandable, and authoritative. The perfect identity for the next leader in <strong>Data & Workflow Automation</strong>.
+            </p>
+
+            <div class="offer-box">
+                <span class="offer-label">Instant Buy Price</span>
+                <div class="price"><span class="currency">$</span>988</div>
+                <div class="condition">
+                    via <span class="paypal-icon">PayPal</span> Secure Transfer
+                </div>
+            </div>
+
+            <!-- الزر يفتح الإيميل مباشرة مع عنوان ورسالة جاهزة -->
+            <a href="mailto:elm164192@gmail.com?subject=I want to buy AnalyFlow.com for $988 via PayPal&body=Hello,%0D%0A%0D%0AI am interested in purchasing AnalyFlow.com for the special price of $988 USD via PayPal.%0D%0A%0D%0APlease send me the payment details to proceed." class="buy-btn">
+                Claim It Now for $988
+            </a>
+
+            <p class="sub-text">
+                <span style="color:#22c55e">●</span> Domain pushed to your account immediately after payment.
+            </p>
+
+            <footer>
+                &copy; <script>document.write(new Date().getFullYear())</script> AnalyFlow.com
+            </footer>
+
+        </div>
+    </div>
+
+</body>
 </html>            background-size: 20px 20px;
             color: var(--text-color);
             min-height: 100vh;
